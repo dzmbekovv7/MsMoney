@@ -9,7 +9,7 @@ export function BlogPage() {
   const type = searchParams.get('type') || ''
   const { data: articles = [], isLoading, isError } = useGetArticles()
 
-  const filteredArticles = type ? articles.filter(article => article.type === type) : articles
+const filteredArticles = type ? (articles || []).filter(article => article.type === type) : (articles || []);
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-teal-50 via-white to-teal-100 text-gray-900">

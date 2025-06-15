@@ -186,7 +186,7 @@ export function AboutPage() {
 
           {/* Authors Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:w-1/2">
-      {authors.map(({ name, role, bio, img, socials }) => (
+      {authors.map(({ name, role, bio, img}) => (
         <div
           key={name}
           className="bg-white rounded-3xl shadow-lg p-8 flex flex-col items-center text-center transition-transform transform hover:scale-105 hover:shadow-2xl"
